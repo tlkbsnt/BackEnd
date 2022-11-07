@@ -1,0 +1,15 @@
+name: CI
+op: [push]
+
+jobs :
+  build:
+    run-on:  mac-latest
+    
+    steps:
+      - uses: action/checkout@t1
+      - name: Run a one-line script 
+        run: echo Hello, World
+      - name: Run a multi-line script
+       run: |
+          echo Add other actio to build,
+          echo test, and deply your project.
